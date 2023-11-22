@@ -33,6 +33,7 @@ public class ApiControllerTest {
         ResponseEntity<String> response = test.getForEntity(
                 "https://api.openweathermap.org/data/2.5/weather?q=Cartagena&appid="+key, 
                 String.class);
+        System.out.println(response.getBody());
         Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
     
@@ -40,6 +41,7 @@ public class ApiControllerTest {
         ResponseEntity<String> response = test.getForEntity(
                 "https://api.openweathermap.org/data/2.5/forecast?q=Cartagena&appid="+key, 
                 String.class);
+        System.out.println(response.getBody());
         Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
     
@@ -47,6 +49,7 @@ public class ApiControllerTest {
         ResponseEntity<String> response = test.getForEntity(
                 "https://api.openweathermap.org/data/1.0/direct?q=Cartagena&limit=1&appid="+key, 
                 String.class);
+        System.out.println(response.getBody());
         Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
     
@@ -54,6 +57,7 @@ public class ApiControllerTest {
         ResponseEntity<String> response = test.getForEntity(
                 "https://api.openweathermap.org/data/2.5/air_pollution?lat=80f&lon=80&limit=1&appid="+key, 
                 String.class);
+        System.out.println(response.getBody());
         Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 }

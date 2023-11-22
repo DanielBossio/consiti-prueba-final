@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -22,7 +23,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Type;
 
 /**
  *
@@ -53,7 +53,7 @@ public class Registro implements Serializable {
     @Size(max = 2)
     @Column(name = "exitoso")
     private String exitoso;
-    @Type(type = "json")
+    @Lob
     @Size(max = 1073741824)
     @Column(name = "respuesta", columnDefinition ="json")
     private String respuesta;
