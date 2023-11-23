@@ -13,4 +13,5 @@ http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
         <heap unit="entries">1000</heap>
         <jsr107:mbeans enable-statistics="true"/>
     </cache>
+    <cache alias="climas" /><cache alias="pronosticos" /><cache alias="localizaciones" /><cache alias="contaminaciones" />
 </config>

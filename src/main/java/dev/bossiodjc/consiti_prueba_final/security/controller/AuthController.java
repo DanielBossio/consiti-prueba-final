@@ -48,7 +48,7 @@ public class AuthController {
     @Autowired
     private JwtProvider jwtProvider;
     
-    @PostMapping("nuevo")
+    @PostMapping("/nuevo")
     public ResponseEntity<String> nuevo(@Valid @RequestBody NuevoUsr nuevoUsuario, BindingResult bindingRes){
         if (bindingRes.hasErrors())
             return new ResponseEntity<> ("Verifique los datos introducidos", HttpStatus.BAD_REQUEST);
